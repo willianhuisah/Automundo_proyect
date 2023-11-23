@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="icon" type="image/x-icon" href="assets/ico/favicon.ico" />
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0C2567;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        #cart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        #cart table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            
+        }
+
+        #cart table,
+        #cart th,
+        #cart td {
+            border: 1px solid #ddd;
+        }
+
+        #cart th,
+        #cart td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        #cart th {
+            background-color: #0C2567;
+            color: #fff;
+        }
+
+        #cart .total {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        #checkout-btn,
+        #clear-cart-btn,
+        #back-btn {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 10px;
+            align-items: center;
+            
+        }
+
+        #button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 400px; /* Ajusta según sea necesario */
+            
+            
+            
+        }
+        a {
+            text-decoration: none;
+            color: #2196F3;
+            font-weight: bold;
+            margin-left: 20px; /* Agregado margen a la izquierda */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contenido del carrito ... -->
+
+    <div id="cart">
+        <h2>Productos en el Carrito</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Marca</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Aquí se agregarán los elementos del carrito dinámicamente con JavaScript -->
+            </tbody>
+        </table>
+        <br>
+
+        <p class="total">Total: $<span id="cart-total">0.00</span></p>
+        <br>
+        <br>
+        <br>
+
+        <div id="button-container">
+            <button id="checkout-btn" onclick="confirmPaymentType('boleta')">Pagar con Boleta</button>
+            <button id="checkout-btn" onclick="confirmPaymentType('factura')">Pagar con Factura</button>
+            <button id="clear-cart-btn" onclick="clearCart()">Limpiar Carrito</button>
+            <a id="back-btn" href="javascript:history.go(-1);">Volver</a>
+        </div>
+    </div>
+
+    <script>
+        // Lógica para mostrar los productos en el carrito
+        window.onload = function () {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+    
+            // Obtener elementos del carrito desde el localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            // Mostrar los elementos en el carrito
+            cart.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>${item.brand}</td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td>${item.quantity}</td>
+                    <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                `;
+                cartItems.appendChild(row);
+            });
+    
+            // Calcular el total
+            const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+            cartTotal.innerText = total.toFixed(2);
+        };
+    
+        function confirmPaymentType(type) {
+        const confirmed = window.confirm(`¿Estás seguro de querer pagar con ${type.charAt(0).toUpperCase() + type.slice(1)}?`);
+
+        if (confirmed) {
+            selectPaymentType(type);
+        }
+    }
+    
+        function processPayment() {
+            alert('Pago procesado exitosamente');
+            clearCart();
+            location.reload();
+            // Aquí podrías realizar acciones adicionales, como enviar la orden a un servidor, etc.
+        }
+    
+        function clearCart() {
+            localStorage.removeItem('cart');
+            alert('Carrito limpiado');
+            // Recargar la página para reflejar los cambios
+            location.reload();
+        }
+
+        function selectPaymentType(type) {
+        if (type === 'boleta') {
+            window.location.href = 'boleta.php'; // Redirige a la página de boleta
+        } else if (type === 'factura') {
+            window.location.href = 'factura.php'; // Redirige a la página de factura
+        } else {
+            alert('Tipo de pago no válido. Por favor, elige entre Boleta o Factura.');
+        }
+    }
+
+    </script>
+</body>
+
+</html>

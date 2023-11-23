@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, post-check=0, pre-check=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/5c279aa682.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+   <title>LOGIN</title>
+   <link rel="icon" type="image/x-icon" href="assets/ico/favicon.ico" />
+</head>
+<body class="bg-dark">
+    <section>
+        <div class="row g-0">
+            <div class="col-lg-7 d-none d-lg-block">
+
+                <div class="text-center px-lg-5 pt-lg-6 pb-lg-3 m-5 ">
+                    <img src="assets/image/a2.jfif" class="img-fluid">
+                </div>
+               
+            </div>
+            <div class="col-lg-5 d-flex flex-column align-items-end min-vh-100">
+                <div class="px-lg-5 pt-lg-5 pb-lg-3  w-100 m-0 ">
+                    <a class="navbar-brand"  href="index.html"><img src="assets/img/SERVICES.svg" class="w-50 h-100" class="img-fluid"></a>
+                    
+                </div>
+                <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
+                    <h1 style="font-family: 'Cambria', sans-serif;" class="font-weight-bold mb-4 text-white">Accesorios y Repuestos</h1>
+
+
+                    <form action="procesar_login.php" method="post" >
+
+                        <!--usuario l-->
+                        <div class="mb-4">
+                            <label for="username" class="form-label font-weight-bold text-white">Usuario</label>
+                            <input type="text" class="form-control bg-dark text-white" placeholder="Nombre de Usuario" id="usuario" name="usuario" required>
+                        </div>
+                        
+                        <!--CONTRASEÑA-->
+                        <div class="mb-4">
+                            <label for="password" class="form-label font-weight-bold text-white">Password</label>
+                            <input type="password" class="form-control bg-dark text-white mb-2" placeholder="Password" id="password" name="password" required>
+                            <a href="" id="#" class="form-text text-white text-decoration-none">¿Has olvidado tu contraseña? Recuperala</a>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label text-white" for="remember">Recordarme</label>
+                        </div>
+                        <button type="submit" value="Iniciar Sesion" name="btniniciarsesion" class="btn btn-primary w-100" style="background: #0C2567;">Iniciar Sesión</button> 
+                        
+                    </form>
+                    <br>
+                    <p class="font-weight-bold text-center text-white">Iniciar Sesión con</p>
+                    <div class="d-flex justify-content-around">
+                        <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AVQVeyyzRgkKDaGX-qQjFaXhzRRiNaVx6zZVhEw3QZsIVclfzOg3UuitCdyQqLWR9JlZldm99FkWWQ&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1962582123%3A1697866563716667&theme=glif"><button type="submit" class="btn btn-outline-light flex-grow-1 mr-2"><i class="fa-brands fa-google lead  mr-2"></i>Google</button></a>
+                        <a href="https://m.facebook.com/login/?locale=es_ES"><button type="submit" class="btn btn-outline-light flex-grow-3"><i class="fa-brands fa-facebook-f lead mr-1"></i>Facebook</button></a>
+                    </div>     
+                </div>
+                <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 w-100 mr-1">
+                <p class="d-inline-block text-white mb-0">¿No tienes cuenta?</p><a href="noti.html" class="text-light font-weight-bold text-decoration-none"> Registrate ahora</a>
+                </div>
+            </div>      
+        </div>
+    </div>
+                    
+      
+    </section>
+
+
+    <!-- Incluye la biblioteca de Bootstrap JS y jQuery (opcional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

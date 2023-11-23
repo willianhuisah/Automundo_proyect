@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- MODIFICAR NOMBRE 134 IMGENES 90-->
+
+<head>
+    <title>SHOP AGREGAR</title>
+    <link rel="icon" type="image/x-icon" href="assets/ico/favicon.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+
+</head>
+
+<body>
+    
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="shopauto.html">
+                <h1>Automundo Shop Services</h1>
+            </a>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="shopauto.html">Shop</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                       
+                    </div>
+
+                    <a class="nav-icon position-relative text-decoration-none" href="cart.html"><!-- CARRITO DE COMPRAS -->
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="perfil.php"> <!-- PERFIL DE USUARIO perfil.php -->
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Open Content -->
+    <section class="bg-light">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-lg-5 mt-5">
+                    <div class="card mb-3"> <!-- coolocar foto-->
+                        <img class="card-img img-fluid" src="assets/image/FiltroDeAire.jpeg" alt="Card image cap" id="product-detail">
+                    </div>
+                    <div class="row">
+                        
+                        <!--Start Carousel Wrapper-->
+                        <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
+                            <!--Start Slides-->
+                            <div class="carousel-inner product-links-wap" role="listbox">
+
+                                <!--First slide-->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/image/FiltroDeAire.jpeg" alt="Product Image 1">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/image/FiltroDeAire.jpeg" alt="Product Image 2">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/image/FiltroDeAire.jpeg" alt="Product Image 3">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+
+                <!-- NOMBRE DEL PRODCUTO -->
+                <div class="col-lg-7 mt-5">
+                    <div class="card">
+
+<!-- ********************************************+-->
+                        <!-- COPIAR ESTA PARTE Y AGREGAR A LOS DEMAS SOLO QUEDARIA MODIFICAR-->
+                        <div class="card-body">
+
+
+                            <div id="products">
+                                <!-- Ejemplos de productos con opción de selección y botón para agregar al carrito -->
+                                <div class="product" data-brand="NKD" data-name="Filtro De Aire" data-price="300.00">
+                                    <h1 class="h2">Filtro De Aire</h1>
+                                    <br>
+                                    <p class="h3 py-2">Precio: $135.00</p>
+                                    <p class="py-2">
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-secondary"></i>
+                                        <span class="list-inline-item text-dark">Rating 4.8 | 36 Comments</span>
+                                    </p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <h6>MARCA:</h6>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <p class="text-muted"><strong>NKD</strong></p><!-- MARCA DEL PRODCUTO en miniscula-->
+                                        </li>
+                                    </ul>
+                                    <h6>Description:</h6>
+                            <p>Un filtro de aire en malas condiciones genera un consumo excesivo de combustible, aumenta la contaminación ambiental
+                                y disminuye el rendimiento del motor.
+                               Lave el filtro de aire de su moto en un período no superior a los 5000 kilómetros, 
+                               si lo observa roto o con desgaste excesivo, reemplace de inmediato.​​</p>
+                            <br>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <h6>COLOR DISPONIBLE:</h6>
+                                </li>
+                                <li class="list-inline-item">
+                                    <p class="text-muted"><strong>Rojo</strong></p>
+                                </li>
+                            </ul>
+                                    <label for="quantity1">Cantidad:</label>
+                                    <select id="quantity1">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <button onclick="addToCart('Filtro De Aire', 'NKD', 300.00, 'quantity1')">
+                                        <img src="assets/ico/ag.png" alt="Ícono de carrito">Agregar al Carrito</button>
+                                </div>
+                            </div>
+                            <script>
+                                function addToCart(productName, brand, price, quantityId) {
+                                const quantitySelect = document.getElementById(quantityId);
+                                const selectedQuantity = parseInt(quantitySelect.value);
+
+                                const cartItem = {
+                                 name: productName,
+                                  brand: brand, // Agregar la marca al objeto del carrito
+                                price: price,
+                                    quantity: selectedQuantity
+                                       };
+
+                                 // Almacenar el elemento en el localStorage (o puedes usar otro método de almacenamiento)
+                                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                                 cart.push(cartItem);
+                                 localStorage.setItem('cart', JSON.stringify(cart));
+
+                                 alert('Producto agregado al carrito');
+                                   }
+
+                            </script> 
+                            <section>
+
+                                <p>
+                                    <center>
+                                        <br>
+                                        <br>
+                                        <button onclick="location.href='shopauto.html'" style="background: transparent; border: none; cursor: pointer; color: black;">
+                                            <img src="assets/ico/s.png" alt="Icono de teléfono" class="icono-m-2"> Seguir comprando 
+                                        </button>
+                                    </center>
+                                </p>
+                                
+                            </section>
+                        </div>
+                    </div> <!-- COPIAR HASTA ESTE DIV Y AGREGAR A LOS DEMAS SOLO QUEDARIA MODIFICAR-->
+<!-- ********************************************+-->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Close Content -->
+
+    
+
+
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-white border-bottom pb-3 border-light logo">Automundo Services</h2>
+                </div>
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                </div>
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Informacion Adicional</h2>
+                </div>
+
+            </div>
+            
+                
+            
+        </div>
+
+        <div class="w-100 bg-black py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2023 - Automundo Services
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+
+    
+
+</body>
+
+</html>
